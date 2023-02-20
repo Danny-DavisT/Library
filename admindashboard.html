@@ -22,11 +22,21 @@
             <div class="navbar-headeer">
                 <a href="#" class="navbar-brand">Library</a>
             </div>
+            <div class="">
+                <div class="nav navbar-nav navbar-right">
+                    <span class="fa fa-message"></span>
+                    <span class="fa fa-facebook">ffffffffffffffff</span>
+                </div>
+            </div>
+            <!-- <div class="navbar-right">
+                <span class="fa fa-message"></span>
+                <span class="fa fa-facebook">ffffffffffffffff</span>
+            </div> -->
         </nav>
     </header>
 <body style="background-color: rgb(247,247,247);">
     <div class="col-md-12">
-        <div class="col-md-9">
+        <div class="col-md-10">
             <div class="sidenav">
                 <ul class="nav-links">
                     <!-- dashboard link -->
@@ -50,7 +60,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="#">New Member</a>
-                                <a href="#">New Boook</a>
+                                <a href="#" onclick="myFunction()">New Boook</a>
                                 <a href="#">New Visitor</a>
                             </li>
                         </ul>
@@ -67,6 +77,7 @@
                                 <a href="#">Books Available in the Library</a>
                                 <a href="#">Books On Loan(Borrowed)</a>
                                 <a href="#">Overdued Books</a>
+                                <a href="#">Members</a>
                             </li>
                         </ul>
                     </li>
@@ -95,7 +106,7 @@
               </div>
               
               <!-- Page content -->
-              <div class="main">
+              <div class="main" >
                 <h1 class="bg-lighter">DASHBOARD</h1><br>
                 <div>
                     <div class="dash-summary">
@@ -151,17 +162,20 @@
                         <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati optio reiciendis placeat ipsum minus inventore aspernatur, quaerat quis vero atque, quo ea vitae nesciunt praesentium ab iure ipsa enim?</p> -->
                     </div>
                     <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati dolorum consectetur quidem? Sint repudiandae hic facilis sunt unde, iusto repellat illum, libero voluptatum praesentium officia optio et magnam est corrupti.</p> -->
-                    <div>
-                        <h3>Overdued books on loans</h3> <br> <br>
-                        <table class="table-hover">
-                            <thead>
+                    <hr>
+                    <div class="ovdue-bks">
+                        <legend>Overdued books on loans</legend>
+                        <!-- <h3>Overdued books on loans</h3> -->
+                        <table class="table-striped">
+                            <thead class="bg-primary" >
                                 <tr>
                                     <th>ISBN</th>
                                     <th>Member</th>
                                     <th>Title</th>
                                     <th>Author</th>
-                                    <th>Overdue</th>
                                     <th>Return Date</th>
+                                    <th>Overdue</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -170,35 +184,44 @@
                                     <td>User</td>
                                     <td>Nelson & Parker</td>
                                     <td>Nelson & Parker</td>
-                                    <td>2 days</td>
                                     <td>june 10 2022</td>
+                                    <td>2 days</td>  
+                                    <td> 
+                                        <span class="fa fa-pencil fa-x"></span> &nbsp;
+                                        <span class="fa fa-trash-o fa-x"></span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>1111111</td>
                                     <td>User</td>
                                     <td>Nelson & Parker</td>
                                     <td>Nelson & Parker</td>
-                                    <td>2 days</td>
                                     <td>june 10 2022</td>
+                                    <td>2 days</td>
+                                    
                                 </tr>
                                 <tr>
                                     <td>1111111</td>
                                     <td>User</td>
                                     <td>Nelson & Parker</td>
                                     <td>Nelson & Parker</td>
-                                    <td>2 days</td>
                                     <td>june 10 2022</td>
+                                    <td>2 days</td>
+                                   
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div>
-
-                </div>
-                <form action="" class="adbook-form">
+                <hr>
+                <!-- <div id="regbook">
+                    
+                </div> -->
+                <form action="" class="adbook-form ">
                     <fieldset>
-                        <legend>Add Book</legend>
+                        <legend> &nbsp; Add Book</legend>
+                        <!-- <h2>Add Book</h2> -->
+                        <div class="adbook-fields">
                         <label for="booknum">ISBN</label> <br>
                         <input type="text" name="" id=""> <br>
                         <label for="author">Author's Name</label> <br>
@@ -216,7 +239,6 @@
                         <input type="checkbox" name="" id="">Digital <br>
                         <input type="checkbox" name="" id="">Audio <br>
                         <input type="checkbox" name="" id="">Video <br>
-
                         <label for="bookimg">Upload Book Image</label>
                         <input type="file" name="" id=""> 
                         <label for="bookpdf">Upload pdf</label>
@@ -226,12 +248,128 @@
                         <label for="bookvideo">Upload Book Video</label>
                         <input type="file" name="" id=""> 
                         <label for="quantity">Quantity</label> <br>
-                        <input type="number" name="" id="">
+                        <input type="number" name="" id=""> <br>
+                        <input type="reset" value="Reset" class="btn btn-danger">
+                        <input type="submit" value="Save" class="btn btn-primary">
+                        </div>
                     </fieldset>
                   </form>
+                  <hr>
+                  <!-- Add a member form -->
+                  <form action="" class="admember-form">
+                    <fieldset>
+                        <legend>&nbsp; Add New Member</legend>
+                        <div class="admember-fields">
+                        <label for="name">Name</label>
+                        <input type="text" name="" id=""> <br>
+                        <label for="idcardnum">ID Card Number</label>
+                        <input type="text" name="" id=""> <br>
+                        <label for="adress">Address</label>
+                        <input type="text" name="" id=""> <br>
+                        <label for="phone number">Phone Number</label>
+                        <input type="tel" name="" id=""> <br>
+                        <label for="email">Email</label>
+                        <input type="email" name="" id=""> <br>
+                        <label for="gender">Gender</label> &nbsp;
+                        <input type="radio" name="gender" value="male" > Male &nbsp;
+                        <input type="radio" name="gender" value="female"> Female<br>
+                        <label for="plan">Plan</label>
+                        <input type="text" name="" id=""> <br>
+                        <input type="reset" value="Reset" class="btn btn-danger">
+                        <input type="submit" value="Register" class="btn btn-primary text-right">
+                        </div>
+                    </fieldset>
+                  </form>
+                  <hr>
+                  <!-- Loan a book form -->
+                  <form action="" class="loanbk-form">
+                    <fieldset>
+                        <legend>&nbsp; Loan A Book</legend>
+                        <div class="loanbk-fields">
+                        <label for="booknum">ISBN</label> <br>
+                        <input type="text" name="" id=""> <br>
+                        <label for="booktitile">Book Title*</label> <br>
+                        <input type="text" name="" id=""> <br>
+                        <label for="userid">User ID</label> <br>
+                        <input type="text" name="" id=""> <br>
+                        <label for="name">Name</label> <br>
+                        <input type="text" name="" id=""> <br>
+                        <label for="issuedate">Date Of Issue</label> <br>
+                        <input type="datetime-local" name="" id=""> <br>
+                        <label for="returndate">Return Date</label> <br>
+                        <input type="datetime-local" name="" id=""> <br> 
+                        <label for="fine">Fine</label> <br>
+                        <input type="number" name="" id=""> <br>
+                        <input type="reset" value="Reset" class="btn btn-danger">
+                        <input type="submit" value="Save" class="btn btn-primary">
+                        </div>
+                    </fieldset>
+                  </form>
+                  <hr>
+                  <div class="avail-bks">
+                    <legend>Available Books</legend>
+                    <table class="table-striped ">
+                        <thead class="bg-primary">
+                            <tr>
+                                <th>ISBN</th>
+                                <th>Book Title</th>
+                                <th>Author Name</th>
+                                <th>Publisher</th>
+                                <th>Category</th>
+                                <th>Shelf</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                    </table>
+                  </div>
+                  <hr>
+                  <div class="loand-bks">
+                    <legend>Loaned Books</legend>
+                    <span class="fa fa-plus"></span>
+                    <table class="table-striped">
+                        <thead class="bg-primary">
+                            <tr>
+                                <th>ISBN</th>
+                                <th>Book Title</th>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Date of Issue</th>
+                                <th>Return Date</th>
+                                <th>Quantity</th>
+                                <th>Fine</th>
+                            </tr>
+                        </thead>
+                    </table>
+                  </div>
+                  <hr>
+                  <div class="libmembrs">
+                    <legend>Library Members</legend>
+                    <table class="table-striped">
+                        <thead class="bg-primary">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>ID Card N<sup>o</sup></th>
+                                <th>Address</th>
+                                <th>Phone Number</th>
+                                <th>Email</th>
+                                <th>Gender</th>
+                                <th>Plan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                  <div class="shadow p-3 mb-5 bg-light rounded">Regular shadow</div>
+
               </div>
+             
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <h1>hello</h1>
             <Admin-Dashboard>hhvhfuycfmyktf</Admin-Dashboard>
         </div>
@@ -284,4 +422,6 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<!-- Custom js -->
+<script src="js/script.js"></script>
 </html>
