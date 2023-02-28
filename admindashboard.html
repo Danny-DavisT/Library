@@ -22,10 +22,20 @@
             <div class="navbar-headeer">
                 <a href="#" class="navbar-brand">Library</a>
             </div>
-            <div class="">
-                <div class="nav navbar-nav navbar-right">
-                    <span class="fa fa-message"></span>
-                    <span class="fa fa-facebook">ffffffffffffffff</span>
+            <div class="container">
+                <ul class="nav navbar-nav navbar-right">
+                    <li> 
+                        <a href="#" class="fa fa-bell-o fa-2x"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-comment-o fa-2x"></a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">
+                            <img class="img-rounded" src="img/carton.jpg" alt="" srcset="" width="50px" height="50px">
+                        </a>
+                    </li> -->
+                </ul>
                 </div>
             </div>
             <!-- <div class="navbar-right">
@@ -38,17 +48,18 @@
     <div class="col-md-12">
         <div class="col-md-10">
             <div class="sidenav">
-                <ul class="nav-links">
+                <ul class="nav-links  nav-tabs">
                     <!-- dashboard link -->
-                    <li>
-                        <a href="#" class="fa fa-home">&nbsp;&nbsp;Dashboard</a> 
+                    <li class="">
+                        <!-- <button class="fa-fa-home tablinks" onclick="opencontent(event,dash-b)">Dashboard</button> -->
+                        <a data-toggle="tab" href="#dash-b" class="fa fa-home tablinks">&nbsp;&nbsp;Dashboard</a> 
                     </li>
                     <!-- book dropdown -->
                     <li class="dropdown"> 
                         <a href="#" class="dropdown-toggle fa fa-book" data-toggle="dropdown">&nbsp;&nbsp;Books<b class="caret"></b> </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">Physical</a>
+                                <a data-toggle="tab" href="#">Physical</a>
                                 <a href="#">Audio</a>
                                 <a href="#">Video</a>
                             </li>
@@ -59,25 +70,25 @@
                         <a href="#" class="dropdown-toggle fa fa-plus-circle" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">New Member</a>
-                                <a href="#" onclick="myFunction()">New Boook</a>
-                                <a href="#">New Visitor</a>
+                                <a href="#admem-form" class="tablinks">New Member</a>
+                                <a href="#" class="tablinks" onclick="opencontent(event, regbk-form)">New Boook</a>
+                                <a href="#" class="tablinks">New Visitor</a>
                             </li>
                         </ul>
                     </li>
                     <!-- loan book link -->
                     <li>
-                        <a href="#" class="fa fa-refresh">&nbsp;&nbsp;Loan a Book</a>
+                        <a href="#lnbk-form" class="fa fa-refresh tablinks">&nbsp;&nbsp;Loan a Book</a>
                     </li>
                     <!-- view dropdown -->
                     <li class="dropdown"> 
                         <a href="#" class="dropdown-toggle fa fa-eye" data-toggle="dropdown">&nbsp;&nbsp;View<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">Books Available in the Library</a>
-                                <a href="#">Books On Loan(Borrowed)</a>
-                                <a href="#">Overdued Books</a>
-                                <a href="#">Members</a>
+                                <a href="#" class="tablinks">Books Available in the Library</a>
+                                <a href="#" class="tablinks">Books On Loan(Borrowed)</a>
+                                <a href="#" class="tablinks">Overdued Books</a>
+                                <a href="#" class="tablinks">Members</a>
                             </li>
                         </ul>
                     </li>
@@ -86,8 +97,8 @@
                         <a href="#" class="dropdown-toggle fa fa-trash" data-toggle="dropdown">&nbsp;&nbsp;Delete<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">Book</a>
-                                <a href="#">Member</a>
+                                <a href="#regbk-form" class="tablinks">Book</a>
+                                <a href="#admem-form" class="tablinks">Member</a>
                                 <!-- <a href="#">Video</a> -->
                             </li>
                         </ul>
@@ -102,276 +113,403 @@
                             </li>
                         </ul>
                     </li> -->
+                    <li>
+                        <a href="#" class="fa fa-sign-out tablinks " id="signout">&nbsp;&nbsp;Sign out</a>
+                    </li>
                 </ul>
               </div>
               
               <!-- Page content -->
-              <div class="main" >
-                <h1 class="bg-lighter">DASHBOARD</h1><br>
-                <div>
-                    <div class="dash-summary">
-                        <div class="dash-summdet">
-                            <div class="sum-icon ">
-                                <i class="fa fa-book fa-2x fa-light"></i>
-                            </div>
-                            <div>
-                                <p>Borrowed <br>
-                                   <!-- <span>234</span>  -->
-                                </p>
-                                <p>245</p>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="dash-summdet">
-                            <div class="sum-icon text-center">  
-                                <i class="fa fa-book fa-2x"></i>
-                            </div>
-                            <div>
-                                <p>Overdue <br>
-                                   <span>234</span> 
-                                </p>
-                                <!-- <p>245</p> -->
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="dash-summdet">
-                            <div class="sum-icon text-center ">
-                                <span class="fa fa-group fa-2x member-icon"></span>  
-                            </div>
-                            <div>
-                                <p>Members <br>
-                                   <span>234</span> 
-                                </p>
-                                <!-- <p>245</p> -->
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="dash-summdet">
-                            <div class="sum-icon text-center ">
-                                <span class="fa fa-user fa-2x visitor-icon"></span>  
-                            </div>
-                            <div>
-                                <p>Visitors <br>
-                                   <span>234</span> 
-                                </p>
-                                <!-- <p>245</p> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dash-graph">
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati optio reiciendis placeat ipsum minus inventore aspernatur, quaerat quis vero atque, quo ea vitae nesciunt praesentium ab iure ipsa enim?</p> -->
-                    </div>
-                    <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati dolorum consectetur quidem? Sint repudiandae hic facilis sunt unde, iusto repellat illum, libero voluptatum praesentium officia optio et magnam est corrupti.</p> -->
-                    <hr>
-                    <div class="ovdue-bks">
-                        <legend>Overdued books on loans</legend>
-                        <!-- <h3>Overdued books on loans</h3> -->
-                        <table class="table-striped">
-                            <thead class="bg-primary" >
-                                <tr>
-                                    <th>ISBN</th>
-                                    <th>Member</th>
-                                    <th>Title</th>
-                                    <th>Author</th>
-                                    <th>Return Date</th>
-                                    <th>Overdue</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1111111</td>
-                                    <td>User</td>
-                                    <td>Nelson & Parker</td>
-                                    <td>Nelson & Parker</td>
-                                    <td>june 10 2022</td>
-                                    <td>2 days</td>  
-                                    <td> 
-                                        <span class="fa fa-pencil fa-x"></span> &nbsp;
-                                        <span class="fa fa-trash-o fa-x"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1111111</td>
-                                    <td>User</td>
-                                    <td>Nelson & Parker</td>
-                                    <td>Nelson & Parker</td>
-                                    <td>june 10 2022</td>
-                                    <td>2 days</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>1111111</td>
-                                    <td>User</td>
-                                    <td>Nelson & Parker</td>
-                                    <td>Nelson & Parker</td>
-                                    <td>june 10 2022</td>
-                                    <td>2 days</td>
-                                   
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+              <div class="tab-content main" >
+                <div class="tab-pane fade in active" id="dash-b">
+                    <div class="dashboard " >
+                        <h1 class="bg-lighter">DASHBOARD</h1><br>
+                           <div class="dash-summary">
+                               <div class="dash-summdet">
+                                   <div class="sum-icon ">
+                                       <i class="fa fa-book fa-2x fa-light"></i>
+                                   </div>
+                                   <div>
+                                       <p>Borrowed <br>
+                                          <span>234</span> 
+                                       </p>
+                                       <!-- <p>245</p> -->
+                                   </div>
+                               </div>
+                               <!--  -->
+                               <div class="dash-summdet">
+                                   <div class="sum-icon text-center">  
+                                       <i class="fa fa-book fa-2x"></i>
+                                   </div>
+                                   <div>
+                                       <p>Overdue <br>
+                                          <span>234</span> 
+                                       </p>
+                                       <!-- <p>245</p> -->
+                                   </div>
+                               </div>
+                               <!--  -->
+                               <div class="dash-summdet">
+                                   <div class="sum-icon text-center ">
+                                       <span class="fa fa-group fa-2x member-icon"></span>  
+                                   </div>
+                                   <div>
+                                       <p>Members <br>
+                                          <span>234</span> 
+                                       </p>
+                                       <!-- <p>245</p> -->
+                                   </div>
+                               </div>
+                               <!--  -->
+                               <div class="dash-summdet">
+                                   <div class="sum-icon text-center ">
+                                       <span class="fa fa-user fa-2x visitor-icon"></span>  
+                                   </div>
+                                   <div>
+                                       <p>Visitors <br>
+                                          <span>234</span> 
+                                       </p>
+                                       <!-- <p>245</p> -->
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="dash-graph">
+                               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati optio reiciendis placeat ipsum minus inventore aspernatur, quaerat quis vero atque, quo ea vitae nesciunt praesentium ab iure ipsa enim?</p> -->
+                           </div>
+                           <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati dolorum consectetur quidem? Sint repudiandae hic facilis sunt unde, iusto repellat illum, libero voluptatum praesentium officia optio et magnam est corrupti.</p> -->
+                           <hr>
+                           <div class="ovdue-bks">
+                               <legend>&nbsp; Overdued books on loan</legend>
+                               <!-- <h3>Overdued books on loans</h3> -->
+                               <div class="table-responsive">
+                                <table class="table-striped">
+                                    <thead class="bg-primary" >
+                                        <tr>
+                                            <th>ISBN</th>
+                                            <th>Member</th>
+                                            <th>Title</th>
+                                            <th>Author</th>
+                                            <th>Return Date</th>
+                                            <th>Overdue</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1111111</td>
+                                            <td>User</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>june 10 2022</td>
+                                            <td>2 days</td>  
+                                            <td> 
+                                                <span class="fa fa-pencil fa-x"></span> &nbsp;
+                                                <span class="fa fa-trash-o fa-x"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1111111</td>
+                                            <td>User</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>june 10 2022</td>
+                                            <td>2 days</td>
+                                            <td>
+                                             <span class="fa fa-pencil fa-x"></span> &nbsp;
+                                                <span class="fa fa-trash-o fa-x"></span>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>1111111</td>
+                                            <td>User</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>june 10 2022</td>
+                                            <td>2 days</td>
+                                            <td>
+                                             <span class="fa fa-pencil fa-x"></span> &nbsp;
+                                                <span class="fa fa-trash-o fa-x"></span>
+                                            </td>
+                                           
+                                        </tr>
+                                    </tbody>
+                                </table>
+                               </div>
+                           </div>
+                       </div>
                 </div>
                 <hr>
-                <!-- <div id="regbook">
-                    
-                </div> -->
-                <form action="" class="adbook-form ">
-                    <fieldset>
-                        <legend> &nbsp; Add Book</legend>
-                        <!-- <h2>Add Book</h2> -->
-                        <div class="adbook-fields">
-                        <label for="booknum">ISBN</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="author">Author's Name</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="booktitile">Book Title*</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="category">Category</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="publisher">Publisher</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="shelf"> Shelf</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="booktype">Book Type</label> <br>
-                        <input type="checkbox" name="" id="">Physical <br>
-                        <input type="checkbox" name="" id="">Digital <br>
-                        <input type="checkbox" name="" id="">Audio <br>
-                        <input type="checkbox" name="" id="">Video <br>
-                        <label for="bookimg">Upload Book Image</label>
-                        <input type="file" name="" id=""> 
-                        <label for="bookpdf">Upload pdf</label>
-                        <input type="file" name="" id=""> 
-                        <label for="bookaudio">Upload Book Audio</label>
-                        <input type="file" name="" id=""> 
-                        <label for="bookvideo">Upload Book Video</label>
-                        <input type="file" name="" id=""> 
-                        <label for="quantity">Quantity</label> <br>
-                        <input type="number" name="" id=""> <br>
-                        <input type="reset" value="Reset" class="btn btn-danger">
-                        <input type="submit" value="Save" class="btn btn-primary">
-                        </div>
-                    </fieldset>
-                  </form>
-                  <hr>
+                <div class="tabcontent" id="regbk-form">
+                    <form action="" class="align-items-md-center adbook-form ">
+                        <fieldset>
+                            <legend> &nbsp; Add Book</legend>
+                            <!-- <h2>Add Book</h2> -->
+                            <div class=" adbook-fields">
+                            <label for="booknum">ISBN</label> <br>
+                            <input type="text" name="" id="" class=""> <br>
+                            <label for="author">Author's Name</label> <br>
+                            <input type="text" name="" id=""> <br>
+                            <label for="booktitile">Book Title*</label> <br>
+                            <input type="text" name="" id="" class=""> <br>
+                            <label for="category">Category</label> <br>
+                            <input type="text" name="" id=""> <br>
+                            <label for="publisher">Publisher</label> <br>
+                            <input type="text" name="" id=""> <br>
+                            <label for="shelf"> Shelf</label> <br>
+                            <input type="text" name="" id=""> <br>
+                            <label for="booktype">Book Type</label> <br>
+                            <input type="checkbox" name="" id="" class="">Physical <br>
+                            <input type="checkbox" name="" id="">Digital <br>
+                            <input type="checkbox" name="" id="">Audio <br>
+                            <input type="checkbox" name="" id="">Video <br>
+                            <label for="bookimg">Upload Book Image</label>
+                            <input type="file" name="" id=""> 
+                            <label for="bookpdf">Upload pdf</label>
+                            <input type="file" name="" id=""> 
+                            <label for="bookaudio">Upload Book Audio</label>
+                            <input type="file" name="" id=""> 
+                            <label for="bookvideo">Upload Book Video</label>
+                            <input type="file" name="" id=""> 
+                            <label for="quantity">Quantity</label> <br>
+                            <input type="number" name="" id=""> <br> <br>
+                            <input type="reset" value="Reset" class="btn btn-darker">
+                            <input type="submit" value="Save" class="btn btn-primary">
+                            </div>
+                        </fieldset>
+                      </form>
+                      </div>
+                      <hr>
                   <!-- Add a member form -->
-                  <form action="" class="admember-form">
-                    <fieldset>
-                        <legend>&nbsp; Add New Member</legend>
-                        <div class="admember-fields">
-                        <label for="name">Name</label>
-                        <input type="text" name="" id=""> <br>
-                        <label for="idcardnum">ID Card Number</label>
-                        <input type="text" name="" id=""> <br>
-                        <label for="adress">Address</label>
-                        <input type="text" name="" id=""> <br>
-                        <label for="phone number">Phone Number</label>
-                        <input type="tel" name="" id=""> <br>
-                        <label for="email">Email</label>
-                        <input type="email" name="" id=""> <br>
-                        <label for="gender">Gender</label> &nbsp;
-                        <input type="radio" name="gender" value="male" > Male &nbsp;
-                        <input type="radio" name="gender" value="female"> Female<br>
-                        <label for="plan">Plan</label>
-                        <input type="text" name="" id=""> <br>
-                        <input type="reset" value="Reset" class="btn btn-danger">
-                        <input type="submit" value="Register" class="btn btn-primary text-right">
-                        </div>
-                    </fieldset>
-                  </form>
-                  <hr>
+                  <div class="tabcontent" id="admem-form">
+                     <form action="" class="admember-form">
+                        <fieldset>
+                            <legend>&nbsp; Add New Member</legend>
+                            <div class="admember-fields">
+                            <label for="name">Name&nbsp;&nbsp;</label>
+                            <input type="text" name="" id="" class=""> <br>
+                            <label for="idcardnum">ID Card Number</label>&nbsp;&nbsp;
+                            <input type="text" name="" id=""> <br>
+                            <label for="adress">Address</label>&nbsp;&nbsp;
+                            <input type="text" name="" id=""> <br>
+                            <label for="phone number">Phone Number</label>&nbsp;&nbsp;
+                            <input type="tel" name="" id=""> <br>
+                            <label for="email">Email</label>&nbsp;&nbsp;
+                            <input type="email" name="" id=""> <br>
+                            <label for="gender">Gender</label> &nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="gender" value="male" > Male &nbsp;
+                            <input type="radio" name="gender" value="female"> Female<br> <br>
+                            <label for="plan">Plan</label>&nbsp;&nbsp;
+                            <input type="text" name="" id=""> <br>
+                            <input type="reset" value="Reset" class="btn btn-dark">
+                            <input type="submit" value="Register" class="btn btn-primary text-right">
+                            </div>
+                        </fieldset>
+                      </form>
+                </div>
+                <hr>
                   <!-- Loan a book form -->
-                  <form action="" class="loanbk-form">
-                    <fieldset>
-                        <legend>&nbsp; Loan A Book</legend>
-                        <div class="loanbk-fields">
-                        <label for="booknum">ISBN</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="booktitile">Book Title*</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="userid">User ID</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="name">Name</label> <br>
-                        <input type="text" name="" id=""> <br>
-                        <label for="issuedate">Date Of Issue</label> <br>
-                        <input type="datetime-local" name="" id=""> <br>
-                        <label for="returndate">Return Date</label> <br>
-                        <input type="datetime-local" name="" id=""> <br> 
-                        <label for="fine">Fine</label> <br>
-                        <input type="number" name="" id=""> <br>
-                        <input type="reset" value="Reset" class="btn btn-danger">
-                        <input type="submit" value="Save" class="btn btn-primary">
+                  <div class="tabcontent" id="lnbk-form">
+                     <form action="" class="loanbk-form">
+                        <fieldset>
+                            <legend>&nbsp; Loan A Book</legend>
+                            <div class="loanbk-fields">
+                            <label for="booknum">ISBN</label> &nbsp;&nbsp;
+                            <input type="text" name="" id="" required> <br>
+                            <label for="booktitile">Book Title*</label> &nbsp;&nbsp;
+                            <input type="text" name="" id="" required> <br>
+                            <label for="userid">User ID</label> &nbsp;&nbsp;
+                            <input type="text" name="" id="" required> <br>
+                            <label for="name">Name</label> &nbsp;&nbsp;
+                            <input type="text" name="" id="" required> <br>
+                            <label for="issuedate">Date Of Issue</label> &nbsp;&nbsp;
+                            <input type="datetime-local" name="" id="" required> <br>
+                            <label for="returndate">Return Date</label> &nbsp;&nbsp;
+                            <input type="datetime-local" name="" id="" arial-required> <br> 
+                            <label for="fine">Fine</label>
+                            <input type="number" name="" id=""> <br>
+                            <input type="reset" value="Reset" class="btn btn-dark">
+                            <input type="submit" value="Save" class="btn btn-primary">
+                            </div>
+                        </fieldset>
+                      </form>
+                  </div>
+                  
+                  <hr>
+                  <!-- available books table -->
+                  <div class="tabcontent" id="avlbks-table">
+                    <div class="avail-bks">
+                        <legend>&nbsp; Available Books</legend>
+                        <div class="table-responsive">
+                            <table class="table-striped ">
+                                <thead class="bg-primary">
+                                    <tr>
+                                        <th>ISBN</th>
+                                        <th>Book Title</th>
+                                        <th>Author Name</th>
+                                        <th>Publisher</th>
+                                        <th>Category</th>
+                                        <th>Shelf</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </fieldset>
-                  </form>
-                  <hr>
-                  <div class="avail-bks">
-                    <legend>Available Books</legend>
-                    <table class="table-striped ">
-                        <thead class="bg-primary">
-                            <tr>
-                                <th>ISBN</th>
-                                <th>Book Title</th>
-                                <th>Author Name</th>
-                                <th>Publisher</th>
-                                <th>Category</th>
-                                <th>Shelf</th>
-                                <th>Quantity</th>
-                            </tr>
-                        </thead>
-                    </table>
+                        
+                      </div>
                   </div>
                   <hr>
-                  <div class="loand-bks">
-                    <legend>Loaned Books</legend>
-                    <span class="fa fa-plus"></span>
-                    <table class="table-striped">
-                        <thead class="bg-primary">
-                            <tr>
-                                <th>ISBN</th>
-                                <th>Book Title</th>
-                                <th>User ID</th>
-                                <th>Name</th>
-                                <th>Date of Issue</th>
-                                <th>Return Date</th>
-                                <th>Quantity</th>
-                                <th>Fine</th>
-                            </tr>
-                        </thead>
-                    </table>
+                  <!-- loaned books table -->
+                  <div class="tabcontent" id="lnbks-table">
+                     <div class="loand-bks">
+                        <legend>&nbsp; Loaned Books</legend>
+                        <!-- <span class="fa fa-plus"></span> -->
+                        <div class="table-responsive">
+                            <table class="table-striped">
+                                <thead class="bg-primary">
+                                    <tr>
+                                        <th>ISBN</th>
+                                        <th>Book Title</th>
+                                        <th>User ID</th>
+                                        <th>Name</th>
+                                        <th>Date of Issue</th>
+                                        <th>Return Date</th>
+                                        <th>Quantity</th>
+                                        <th>Fine</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
                   </div>
                   <hr>
-                  <div class="libmembrs">
-                    <legend>Library Members</legend>
-                    <table class="table-striped">
-                        <thead class="bg-primary">
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>ID Card N<sup>o</sup></th>
-                                <th>Address</th>
-                                <th>Phone Number</th>
-                                <th>Email</th>
-                                <th>Gender</th>
-                                <th>Plan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-
-                            </tr>
-                        </tbody>
-                    </table>
+                  <!-- librart members table -->
+                  <div class="tabcontent" id="libmem-table">
+                     <div class="libmembrs">
+                        <legend>&nbsp; Library Members</legend>
+                        <div class="table-responsive">
+                            <table class="table-striped">
+                                <thead class="bg-primary">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>ID Card N<sup>o</sup></th>
+                                        <th>Address</th>
+                                        <th>Phone Number</th>
+                                        <th>Email</th>
+                                        <th>Gender</th>
+                                        <th>Plan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
                   </div>
-                  <div class="shadow p-3 mb-5 bg-light rounded">Regular shadow</div>
+                  
+                  <!-- <div class="shadow p-3 mb-5 bg-light rounded">Regular shadow</div> -->
 
               </div>
              
         </div>
         <div class="col-md-2">
-            <h1>hello</h1>
-            <Admin-Dashboard>hhvhfuycfmyktf</Admin-Dashboard>
+            <!-- <h1>hello</h1>
+            <Admin-Dashboard>hhvhfuycfmyktf</Admin-Dashboard> -->
         </div>
     </div>
   <div class="col-md-12">
