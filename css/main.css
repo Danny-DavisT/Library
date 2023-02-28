@@ -166,6 +166,8 @@ nav{
 .main {
     margin-left:180px; /* Same as the width of the sidebar */
     /* padding: 0px 10px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -272,3 +274,7 @@ nav{
 /* .loand-bks{
     
 } */
+.nav-tabs li  a:hover {
+    border-color: #eee #eee #ddd;
+    background-color: rgb(19, 96, 211);
+  }
