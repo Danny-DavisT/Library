@@ -48,47 +48,62 @@
     <div class="col-md-12">
         <div class="col-md-10">
             <div class="sidenav">
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-pills nav-stacked">
                     <!-- dashboard link -->
-                    <li class="nav-item">
+                    <li class="">
                         <!-- <button class="fa-fa-home tablinks" onclick="opencontent(event,dash-b)">Dashboard</button> -->
-                        <a class="fa fa-home nav-link active" data-toggle="tab" href="#dash-b">&nbsp;&nbsp;Dashboard</a> 
+                        <a class="fa fa-home nav-link active" data-toggle="pill" href="#dash-b">&nbsp;&nbsp;Dashboard</a> 
                     </li>
                     <!-- book dropdown -->
                     <li class="dropdown"> 
                         <a href="#" class="dropdown-toggle fa fa-book" data-toggle="dropdown">&nbsp;&nbsp;Books<b class="caret"></b> </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a data-toggle="tab" href="#">Physical</a>
-                                <a href="#">Audio</a>
-                                <a href="#">Video</a>
+                                <a data-toggle="pill" href="#">Physical</a>   
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#">Audio</a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#">Video</a>
                             </li>
                         </ul>
                     </li>
                     <!-- register dropdown -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle fa fa-plus-circle" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
-                        <ul class="dropdown-menu nav nav-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#admem-form" class="tablinks">New Member</a>
-                                <a class="nav-link" data-toggle="tab" href="#regbk-form" class="tablinks" >New Boook</a>
-                                <a href="#" class="tablinks">New Visitor</a>
+                        <ul class="dropdown-menu nav nav-pills nav-stacked">
+                            <li class="">
+                                <a class="nav-link" data-toggle="pill" href="#admem-form" class="tablinks">New Member</a>
                             </li>
+                            <li class="">
+                                <a class="nav-link" data-toggle="pill" href="#regbk-form" class="tablinks" >New Book</a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="pill" href="#" class="tablinks">New Visitor</a>
+                            </li>
+                            
                         </ul>
                     </li>
                     <!-- loan book link -->
                     <li class="">
-                        <a class="fa fa-refresh nav-link" data-toggle="tab" href="#lnbk-form" >&nbsp;&nbsp;Loan a Book</a>
+                        <a class="fa fa-refresh nav-link" data-toggle="pill" href="#lnbk-form" >&nbsp;&nbsp;Loan a Book</a>
                     </li>
                     <!-- view dropdown -->
                     <li class="dropdown"> 
                         <a href="#" class="dropdown-toggle fa fa-eye" data-toggle="dropdown">&nbsp;&nbsp;View<b class="caret"></b></a>
-                        <ul class="dropdown-menu nav nav-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#avlbks-table" >Books Available in the Library</a>
-                                <a class="nav-link" data-toggle="tab" href="#lnbks-table" >Books On Loan(Borrowed)</a>
-                                <a class="nav-link" data-toggle="tab" href="#" >Overdued Books</a>
-                                <a class="nav-link" data-toggle="tab" href="#libmem-table" >Members</a>
+                        <ul class="dropdown-menu nav nav-pills nav-stacked">
+                            <li class="">
+                                <a class="nav-link" data-toggle="pill" href="#avlbks-table" >Books Available in the Library</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-toggle="pill" href="#lnbks-table" >Books On Loan(Borrowed)</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-toggle="pill" href="#" >Overdued Books</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-toggle="pill" href="#libmem-table" >Members</a>
                             </li>
                         </ul>
                     </li>
@@ -97,9 +112,11 @@
                         <a href="#" class="dropdown-toggle fa fa-trash" data-toggle="dropdown">&nbsp;&nbsp;Delete<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#regbk-form" class="tablinks">Book</a>
-                                <a href="#admem-form" class="tablinks">Member</a>
+                                <a data-toggle="pill" href="#" class="tablinks">Book</a>
                                 <!-- <a href="#">Video</a> -->
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#" class="tablinks">Member</a>
                             </li>
                         </ul>
                     </li>
@@ -114,64 +131,71 @@
                         </ul>
                     </li> -->
                     <li>
-                        <a href="#" class="fa fa-sign-out tablinks " id="signout">&nbsp;&nbsp;Sign out</a>
+                        <a data-toggle="pill" class="fa fa-sign-out  tablinks" href="#"  id="signout">&nbsp;&nbsp;Sign out</a>
                     </li>
                 </ul>
               </div>
               
               <!-- Page content -->
               <div class="tab-content main mt-3" >
-                <div class=" tab-pane fade in active" id="dash-b">
+                <div class=" tab-pane  in active" id="dash-b">
                     <div class="dashboard " >
                         <h1 class="bg-lighter">DASHBOARD</h1><br>
                            <div class="dash-summary">
-                               <div class="dash-summdet">
-                                   <div class="sum-icon ">
-                                       <i class="fa fa-book fa-2x fa-light"></i>
-                                   </div>
-                                   <div>
-                                       <p>Borrowed <br>
-                                          <span>234</span> 
-                                       </p>
-                                       <!-- <p>245</p> -->
-                                   </div>
-                               </div>
-                               <!--  -->
-                               <div class="dash-summdet">
-                                   <div class="sum-icon text-center">  
-                                       <i class="fa fa-book fa-2x"></i>
-                                   </div>
-                                   <div>
-                                       <p>Overdue <br>
-                                          <span>234</span> 
-                                       </p>
-                                       <!-- <p>245</p> -->
-                                   </div>
-                               </div>
-                               <!--  -->
-                               <div class="dash-summdet">
-                                   <div class="sum-icon text-center ">
-                                       <span class="fa fa-group fa-2x member-icon"></span>  
-                                   </div>
-                                   <div>
-                                       <p>Members <br>
-                                          <span>234</span> 
-                                       </p>
-                                       <!-- <p>245</p> -->
-                                   </div>
-                               </div>
-                               <!--  -->
-                               <div class="dash-summdet">
-                                   <div class="sum-icon text-center ">
-                                       <span class="fa fa-user fa-2x visitor-icon"></span>  
-                                   </div>
-                                   <div>
-                                       <p>Visitors <br>
-                                          <span>234</span> 
-                                       </p>
-                                       <!-- <p>245</p> -->
-                                   </div>
-                               </div>
+                             <div class="row d-flex">
+                                 <div class="col-lg-3 col-sm-6">
+                                    <div class="dash-summdet">
+                                        <div class="sum-icon ">
+                                            <i class="fa fa-book fa-2x fa-light"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-weight-bolder">Borrowed <br>
+                                               <span class="">234</span> 
+                                            </p>
+                                            <!-- <p>245</p> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6">
+                                    <div class="dash-summdet">
+                                        <div class="sum-icon ">
+                                            <i class="fa fa-book fa-2x fa-light"></i>
+                                        </div>
+                                        <div>
+                                            <p>Borrowed <br>
+                                               <span>234</span> 
+                                            </p>
+                                            <!-- <p>245</p> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6">
+                                    <div class="dash-summdet">
+                                        <div class="sum-icon ">
+                                            <i class="fa fa-book fa-2x fa-light"></i>
+                                        </div>
+                                        <div>
+                                            <p>Borrowed <br>
+                                               <span>234</span> 
+                                            </p>
+                                            <!-- <p>245</p> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6">
+                                    <div class="dash-summdet">
+                                        <div class="sum-icon ">
+                                            <i class="fa fa-book fa-2x fa-light"></i>
+                                        </div>
+                                        <div>
+                                            <p>Borrowed <br>
+                                               <span>234</span> 
+                                            </p>
+                                            <!-- <p>245</p> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                             </div>
                            </div>
                            <div class="dash-graph">
                                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati optio reiciendis placeat ipsum minus inventore aspernatur, quaerat quis vero atque, quo ea vitae nesciunt praesentium ab iure ipsa enim?</p> -->
@@ -278,7 +302,7 @@
                       </form>
                       </div>
                   <!-- Add a member form -->
-                  <div class="tab-pane fade mt-3" id="admem-form">
+                  <div class="tab-pane  mt-3" id="admem-form">
                      <form action="" class="admember-form">
                         <fieldset>
                             <legend>&nbsp; Add New Member</legend>
@@ -305,7 +329,7 @@
                       </form>
                 </div>
                   <!-- Loan a book form -->
-                  <div class="tab-pane fade" id="lnbk-form">
+                  <div class="tab-pane " id="lnbk-form">
                      <form action="" class="loanbk-form">
                         <fieldset>
                             <legend>&nbsp; Loan A Book</legend>
@@ -331,7 +355,7 @@
                       </form>
                   </div>
                   <!-- available books table -->
-                  <div class="tab-pane fade" id="avlbks-table">
+                  <div class="tab-pane " id="avlbks-table">
                     <div class="avail-bks">
                         <legend>&nbsp; Available Books</legend>
                         <div class="table-responsive">
@@ -385,7 +409,7 @@
                       </div>
                   </div>
                   <!-- loaned books table -->
-                  <div class="tab-pane fade" id="lnbks-table">
+                  <div class="tab-pane " id="lnbks-table">
                      <div class="loand-bks">
                         <legend>&nbsp; Loaned Books</legend>
                         <!-- <span class="fa fa-plus"></span> -->
@@ -440,7 +464,7 @@
                       </div>
                   </div>
                   <!-- library members table -->
-                  <div class="tab-pane fade" id="libmem-table">
+                  <div class="tab-pane " id="libmem-table">
                      <div class="libmembrs">
                         <legend>&nbsp; Library Members</legend>
                         <div class="table-responsive">
