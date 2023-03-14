@@ -55,7 +55,9 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: rgb(19, 96, 211);
+    /* background-color: rgb(19, 96, 211); */
+    background-color: #337ab7; 
+
 }
 @media screen and (max-widht:673) {
     .dash-summdet{
@@ -75,13 +77,14 @@
     padding: 13px;
 }
 .member-icon{
-    padding: 0px 0;
-    color: #ffff;
-    padding: 12px 10px;
+    /* padding: 0px 0; */
+    /* color: red; */
+    padding: 12px 6px;
 }
 .visitor-icon{
     color: #ffff;
     padding-top: 10px;
+    padding-left: 5px;
 }
 .dash-graph{
     width: 100%;
@@ -120,13 +123,15 @@ nav{
           box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 .nav-link{
-    /* margin-left: -25px; */
+    /* margin-left: -2; */
     z-index: 1;
     color: red;
+
 }
 .sidenav ul{
     list-style-type: none;
     text-decoration: none;
+    margin-top: 10px;
     /* margin-left: 2220px; */
 }
 
@@ -148,18 +153,18 @@ nav{
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
-    background-color: rgb(19, 96, 211);
+    /* background-color: rgb(19, 96, 211); */
     text-decoration: none;
 }
 .sidenav a:active {
-    background-color: rgb(19, 96, 211);
+    /* background-color: rgb(19, 96, 211); */
     color: #fff;
     text-decoration: none;
 }
 .tabcontent{
     /* display: none; */
     height: fit-content;
-    margin-top: 10px;
+    margin-top: 290px;
 }
 #signout{
     bottom: 0px;
@@ -168,7 +173,7 @@ nav{
 .main {
     margin-left:180px; /* Same as the width of the sidebar */
     /* padding: 0px 10px; */
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -190,14 +195,18 @@ nav{
 .admember-form legend,.adbook-form legend,
 .loanbk-form legend,.ovdue-bks legend,
 .avail-bks legend,.loand-bks legend,.libmembrs legend{
-    color: rgb(19, 96, 211);
+    /* color: rgb(19, 96, 211); */
+    color: #337ab7; 
+
 }
 /* ---add book form */
 /* .adbook-form{
     
 } */
 .adbook-form legend {
-    color: rgb(19, 96, 211);
+    /* color: rgb(19, 96, 211); */
+    color: #337ab7; 
+
 }
  /* fieldset{
     color: rgb(19, 96, 211);
@@ -288,5 +297,28 @@ nav{
 } */
 .nav-tabs li  a:hover {
     border-color: #eee #eee #ddd;
-    background-color: rgb(19, 96, 211);
-  }
+    /* background-color: rgb(19, 96, 211); */
+}
+/* .nav-pills .nav-link.active:visited{
+    background-color: red;
+} */
+/* .nav-pills .nav-link:visited{
+    background-color: red;
+} */
+.nav-pills .nav-link:hover {
+    color: #fff; 
+    background-color: #337ab7; 
+    /* background-color: rgb(19, 96, 211); */
+}
+/* .nav-pills .nav-link :visited{
+    background-color: red;
+ } */
+ /* .nav-pills .nav-link:focus{
+    background-color: red;
+ } */
+ /* .nav-pills .nav-link::after{
+    background-color: red;
+ } */
+ /* .dropdown-menu nav .nav-pills .nav-link:after{
+    color: greenyellow;
+ } */

@@ -19,24 +19,34 @@
     </head>
     <header>
         <nav class="navbar navbar-fixed-top " role="navigation">
-            <div class="navbar-headeer">
-                <a href="#" class="navbar-brand">Library</a>
-            </div>
-            <div class="container">
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- <li> 
-                        <a href="#" class="fa fa-bell-o fa-2x"></a>
-                    </li>
-                    <li>
-                        <a href="#" class="fa fa-comment-o fa-2x"></a>
-                    </li> -->
-                    <!-- <li>
-                        <a href="#">
-                            <img class="img-rounded" src="img/carton.jpg" alt="" srcset="" width="50px" height="50px">
-                        </a>
-                    </li> -->
-                </ul>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar "></span>
+                        <span class="icon-bar "></span>
+                    </button>
+                    <a href="#" class="">
+                        <img src="img/logoGRYellow-removebg-preview.png" alt="logo" srcset="" width="120px" height="70px"></a>
                 </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!-- <ul class="nav navbar-nav navbar-right">
+                        <li> 
+                            <a href="#" class="fa fa-bell-o fa-2x"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-comment-o fa-2x"></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="img-circle" src="img/carton.jpg" alt="" srcset="" width="50px" height="50px">
+                            </a>
+                        </li>
+                    </ul> -->
+                    </div>
+            </div>
+           
             </div>
             <!-- <div class="navbar-right">
                 <span class="fa fa-message"></span>
@@ -56,22 +66,22 @@
                     </li>
                     <!-- book dropdown -->
                     <li class="dropdown"> 
-                        <a href="#" class="dropdown-toggle fa fa-book" data-toggle="dropdown">&nbsp;&nbsp;Books<b class="caret"></b> </a>
+                        <a class="dropdown-toggle fa fa-book nav-link" data-toggle="dropdown" href="#">&nbsp;&nbsp;Books<b class="caret"></b> </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a data-toggle="pill" href="#">Physical</a>   
+                                <a class="nav-link" data-toggle="pill" href="#">Physical</a>   
                             </li>
                             <li>
-                                <a data-toggle="pill" href="#">Audio</a>
+                                <a class="nav-link" data-toggle="pill" href="#">Audio</a>
                             </li>
                             <li>
-                                <a data-toggle="pill" href="#">Video</a>
+                                <a class="nav-link" data-toggle="pill" href="#">Video</a>
                             </li>
                         </ul>
                     </li>
                     <!-- register dropdown -->
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle fa fa-plus-circle" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle fa fa-plus-circle nav-link" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
                         <ul class="dropdown-menu nav nav-pills nav-stacked">
                             <li class="">
                                 <a class="nav-link" data-toggle="pill" href="#admem-form" class="tablinks">New Member</a>
@@ -80,7 +90,7 @@
                                 <a class="nav-link" data-toggle="pill" href="#regbk-form" class="tablinks" >New Book</a>
                             </li>
                             <li class="">
-                                <a data-toggle="pill" href="#" class="tablinks">New Visitor</a>
+                                <a class="nav-link" data-toggle="pill" href="#" >New Visitor</a>
                             </li>
                             
                         </ul>
@@ -91,7 +101,7 @@
                     </li>
                     <!-- view dropdown -->
                     <li class="dropdown"> 
-                        <a href="#" class="dropdown-toggle fa fa-eye" data-toggle="dropdown">&nbsp;&nbsp;View<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle fa fa-eye nav-link" data-toggle="dropdown">&nbsp;&nbsp;View<b class="caret"></b></a>
                         <ul class="dropdown-menu nav nav-pills nav-stacked">
                             <li class="">
                                 <a class="nav-link" data-toggle="pill" href="#avlbks-table" >Books Available in the Library</a>
@@ -109,14 +119,14 @@
                     </li>
                     <!-- delete dropdown -->
                     <li class="dropdown"> 
-                        <a href="#" class="dropdown-toggle fa fa-trash" data-toggle="dropdown">&nbsp;&nbsp;Delete<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle fa fa-trash nav-link" data-toggle="dropdown">&nbsp;&nbsp;Delete<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a data-toggle="pill" href="#" class="tablinks">Book</a>
+                                <a class="nav-link" data-toggle="pill" href="#" >Book</a>
                                 <!-- <a href="#">Video</a> -->
                             </li>
                             <li>
-                                <a data-toggle="pill" href="#" class="tablinks">Member</a>
+                                <a class="nav-link" data-toggle="pill" href="#">Member</a>
                             </li>
                         </ul>
                     </li>
@@ -131,7 +141,7 @@
                         </ul>
                     </li> -->
                     <li>
-                        <a data-toggle="pill" class="fa fa-sign-out  tablinks" href="#"  id="signout">&nbsp;&nbsp;Sign out</a>
+                        <a class="fa fa-sign-out  nav-link" data-toggle="pill"  href="#"  id="signout">&nbsp;&nbsp;Sign out</a>
                     </li>
                 </ul>
               </div>
@@ -162,7 +172,7 @@
                                             <i class="fa fa-book fa-2x fa-light"></i>
                                         </div>
                                         <div>
-                                            <p>Borrowed <br>
+                                            <p>Overdued <br>
                                                <span>234</span> 
                                             </p>
                                             <!-- <p>245</p> -->
@@ -172,10 +182,10 @@
                                  <div class="col-lg-3 col-sm-6">
                                     <div class="dash-summdet">
                                         <div class="sum-icon ">
-                                            <i class="fa fa-book fa-2x fa-light"></i>
+                                            <i class="fa fa-group fa-2x  member-icon center"></i>
                                         </div>
                                         <div>
-                                            <p>Borrowed <br>
+                                            <p>Members <br>
                                                <span>234</span> 
                                             </p>
                                             <!-- <p>245</p> -->
@@ -185,10 +195,10 @@
                                  <div class="col-lg-3 col-sm-6">
                                     <div class="dash-summdet">
                                         <div class="sum-icon ">
-                                            <i class="fa fa-book fa-2x fa-light"></i>
+                                            <i class="fa fa-user fa-2x fa-light visitor-icon"></i>
                                         </div>
                                         <div>
-                                            <p>Borrowed <br>
+                                            <p>Visitors <br>
                                                <span>234</span> 
                                             </p>
                                             <!-- <p>245</p> -->
